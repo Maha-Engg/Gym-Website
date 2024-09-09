@@ -1,5 +1,9 @@
 import React from 'react';
 import aboutImage from '../images/about.png'
+
+
+import React from 'react';
+import aboutImage from '../images/about.png'
 const About=()=>{
 
     return(
