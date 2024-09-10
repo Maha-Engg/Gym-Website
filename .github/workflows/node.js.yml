@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - master  
+      - main  
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
     - name: Build project
       run: npm run build
       
-    # name: sourcemovement
+     # name: sourcemovement
      # run: sudo cp -r /home/administrator/Live-Project/Live_Front/dev/_work/gym-website/build/ * /var/www/html
   
     - name: apache2restart
