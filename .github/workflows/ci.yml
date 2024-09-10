@@ -1,4 +1,4 @@
-name: bremmo
+name: opt
 
 on:
   push:
