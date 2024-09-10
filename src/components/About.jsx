@@ -1,5 +1,6 @@
 import React from 'react';
 import aboutImage from '../images/about.png'
+welcome to google
 
 
 import React from 'react';
