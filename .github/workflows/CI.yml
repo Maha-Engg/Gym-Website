@@ -1,0 +1,32 @@
+name: SonarQube Analysis
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  sonar:
+    runs-on: ubuntu-latest
+    permissions:
+      checks: write       # Ensure write permission for checks
+      contents: read      # Required for reading repository contents
+      pull-requests: write # Required for interacting with pull requests
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK (if applicable, for Java projects)
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Run SonarQube Analysis
+        run: |
+          sonar-scanner
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
